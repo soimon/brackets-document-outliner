@@ -1,0 +1,12 @@
+{
+    "name": "com.soimon.DocumentOutliner",
+    "title": "Document outliner",
+    "description": "Shows the outline of the currently selected HTML5 document.",
+    "homepage": "",
+    "version": "1.0.0",
+    "author": "soimon",
+    "license": "MIT",
+    "engines": {
+        "brackets": ">=0.20.0"
+    }
+}

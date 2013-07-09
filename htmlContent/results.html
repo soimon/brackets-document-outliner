@@ -1,0 +1,11 @@
+<table class="table table-striped row-highlight">
+    <tbody>
+        {{#list}}
+        <tr data-line="{{line}}" data-collumn="{{collumn}}">
+            <td class="line">{{line}}</td>
+            <td style="text-indent: {{level}}px">{{#isChild}}<span>∟</span>{{/isChild}}{{{name}}}</td>
+            <td class="no">#{{no}}</td>
+        </tr>
+        {{/list}}
+    </tbody>
+</table>

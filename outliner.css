@@ -1,0 +1,20 @@
+#outliner-results-panel td.line
+{
+	width: 25px;
+	text-align: right;
+}
+#outliner-results-panel td.no
+{
+	width: 40px;
+	padding-right: 25px;
+}
+#outliner-results-panel td
+{
+	padding-left: 25px;
+}
+#outliner-results-panel td span
+{
+	opacity: 0.5;
+	margin-right: 10px;
+	line-height: -5px !important;
+}
