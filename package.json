@@ -1,5 +1,5 @@
 {
-    "name": "soimon.DocumentOutliner",
+    "name": "soimon.brackets-document-outliner",
     "title": "Document outliner",
     "description": "Shows the outline of the currently selected HTML5 document.",
     "homepage": "https://github.com/soimon/brackets-document-outliner",
