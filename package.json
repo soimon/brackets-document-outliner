@@ -1,10 +1,10 @@
 {
-    "name": "com.soimon.DocumentOutliner",
+    "name": "soimon.DocumentOutliner",
     "title": "Document outliner",
     "description": "Shows the outline of the currently selected HTML5 document.",
-    "homepage": "",
+    "homepage": "https://github.com/soimon/brackets-document-outliner",
     "version": "1.0.0",
-    "author": "soimon",
+    "author": "soimon soimon@soimon.com (http://www.soimon.com)",
     "license": "MIT",
     "engines": {
         "brackets": ">=0.20.0"

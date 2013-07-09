@@ -13,7 +13,7 @@ define( function( require, exports, module )
 {
 	'use strict';
 	
-	var NAME			= "com.soimon.DocumentOutliner",
+	var NAME			= "soimon.DocumentOutliner",
 		TOGGLE_ENABLE	= NAME + ".showOutline",
 		MENU_NAME		= "Show Document Outline";
 	
