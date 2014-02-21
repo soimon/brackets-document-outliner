@@ -124,7 +124,7 @@ define( function( require, exports, module )
 		
 		var name = getHeadingText( value.heading );
 		var nodeName = value.startingNode.nodeName;
-		
+	
 		// Find out where in the document this section starts
 		
 		var countBefore = $( value.startingNode ).prevALL( nodeName ).length;
@@ -154,9 +154,18 @@ define( function( require, exports, module )
 	
 	function refresh( )
 	{
-		// Get the body of the document
-		
 		var input = DocumentManager.getCurrentDocument( ).getText( );
+		
+		// Strip the comments from the input
+		
+		var start;
+		while( ( start = input.search( "<!--" ) ) !== -1 )
+		{
+			var length = input.substr( start ).search( "-->" ) + 3;
+			input = input.substr( 0, start ) + ( new Array( length + 1 ).join( " " ) ) + input.substr( start + length );
+		}
+		
+		// Get the body of the document
 		var body = _bodyOpen.test( input ) ? "<body" + input.split( _bodyOpen )[1].split( _bodyClose )[0] + "</body>" : input;
 		
 		// Inject this body inside a new HTML document
