@@ -32,8 +32,9 @@ define( function( require, exports, module )
 	
 	var outline				= require( "h5o" ).outline;
 	var getHeadingText		= require( "h5o" ).getHeadingText;
-	var preferences			= PreferencesManager.getPreferenceStorage( module, { enabled: false } );
+	var preferences			= PreferencesManager.getExtensionPrefs( NAME );
 	
+	preferences.definePreference( "enabled", " boolean", "true" );
 	ExtensionUtils.loadStyleSheet( module, "outliner.css" );
 	
 	// Properties
@@ -46,7 +47,7 @@ define( function( require, exports, module )
 		$content		= $panel.children( ":last" ),
 		$selectedRow	= null;
 	var panel			= PanelManager.createBottomPanel( NAME + ".panel", $panel, 100 ),
-		enabled			= preferences.getValue( "enabled" );
+		enabled			= preferences.get( "enabled" );
 	
 	/**
 	 * jQuery extensions by stackoverflow user nickf as asnwered on the question below.
@@ -242,7 +243,7 @@ define( function( require, exports, module )
 			panel.show( );
 		}
 		enabled = true;
-		preferences.setValue( "enabled", true );
+		preferences.set( "enabled", true );
 		updateListeners( );
 		CommandManager.get( TOGGLE_ENABLE ).setChecked( true );
 	}
@@ -255,7 +256,7 @@ define( function( require, exports, module )
 	{
 		panel.hide( );
 		enabled = false;
-		preferences.setValue( "enabled", false );
+		preferences.set( "enabled", false );
 		updateListeners( );
 		CommandManager.get( TOGGLE_ENABLE ).setChecked( false );
 	}
